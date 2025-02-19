@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output Function</title>
+</head>
+<body>
+    <h4>Ada 4 cara menampilkan output pada Javascript:</h4>
+<ol>
+    <li>Menggunakan Fungsi console.log();</li>
+    <li>Menggunakan Fungsi alert();</li>
+    <li>Menggunakan Fungsi document.write();</li>
+    <li>Menggunakan innerHTML.</li>
+</ol>
+<p>Kali ini saya akan mencoba menggunakan funsi alert & innerHTML</p>
+<h4>1. Fungsi alert</h4>
+<script>
+    alert('saya menggunakan alert yang no.1');
+    function sayhello(){
+        alert('hello');
+    }
+</script>
+<button onclick="sayhello()">click me</button>
+
+<h4>2. Fungsi innerHTML</h4>
+<div id="hasiloutput"></div>
+
+<script>
+    //membuat objek
+    var hasil = document.getElementById("hasiloutput");
+
+    //menampilkan output
+    hasil.innerHTML = "<p>Aku belajar Javascript</p>";
+</script>
+
+</body>
+</html>
