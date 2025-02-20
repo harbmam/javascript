@@ -1,1 +1,1 @@
-# javascriptsemua tugas
+# javascript semua tugas
