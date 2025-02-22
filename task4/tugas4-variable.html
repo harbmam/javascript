@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+    <h1>Informasi Pengguna</h1>
+    <div id="contoh"></div>
+
+    <script>
+        var nama = "Jhon Doe";
+        var umur = 30;
+        var mahasiswa = true;
+        var alamat = null;
+        var hobi = ["Membaca", "Bersepeda", "Berenang"];
+        var pekerjaan = {
+            level: "Pengembang",
+            pengalaman: "5 Tahun"
+        };
+
+        //menampilkan di console
+        console.log ("Nama : ", nama);
+        console.log ("Umur : ", umur);
+        console.log ("Mahasiswa : ", mahasiswa);
+        console.log ("Alamat : ", alamat);
+        console.log ("Hobi : ", hobi.join(", "));
+        console.log ("Pekerjaan : ", pekerjaan.level);
+        console.log ("Pengalaman : ", pekerjaan.pengalaman);
+
+        alert("Data Berhasil Dimuat !");
+
+        //menampilkan di halaman html
+        document.getElementById("contoh").innerHTML = `
+           <p> Nama : ${nama} </p>
+           <p> Umur : ${umur}  </p>
+           <p> Mahasiswa : ${mahasiswa}   </p>
+           <p> Alamat : ${alamat}  </p>
+           <p> Hobi : ${hobi.join(", ")}  </p>
+           <p> Pekerjaan : ${pekerjaan.level}   </p>
+           <p> Pengalaman : ${pekerjaan.pengalaman}  </p>
+        `;
+     
+    </script>
+</body>
+</html>
