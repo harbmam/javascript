@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Kalkulator Task6</h2>
+    <label for="bulanan">Masukan Pengeluaran bulanan</label>
+    <input type="number" id="bulanan">
+
+    <label for="tahunan">Masukan Pengeluaran tahunan</label>
+    <input type="number" id="tahunan">
+
+    <button onclick="hitung()">Hitung</button>
+
+    <hr>
+    <h2>Hasil</h2>
+    <p id="total"></p>
+    <p id="perbandingan"></p>
+    <p id="rata"></p>
+    <script>
+        // Fungsi untuk menghitung total 
+function hitungpengeluaran(bulanan, tahunan) {
+    return bulanan * 12 + tahunan;
+}
+
+// Fungsi untuk membandingkan 
+function perbandinganpengeluaran(bulanan, tahunan) {
+    if (bulanan * 12 > tahunan) {
+        return "Pengeluaran bulanan lebih besar dari pengeluaran tahunan.";
+    } else if (bulanan * 12 < tahunan) {
+        return "Pengeluaran tahunan lebih besar dari pengeluaran bulanan.";
+    } else {
+        return "Pengeluaran bulanan dan tahunan sama.";
+    }
+}
+
+// Fungsi untuk menghitung rata-rata 
+function rata(tahunan) {
+    return tahunan / 12;
+}
+
+// Contoh penggunaan
+function hitung() {
+            let pengeluaranBulanan = parseFloat(document.getElementById("bulanan").value) || 0;
+            let pengeluaranTahunan = parseFloat(document.getElementById("tahunan").value) || 0;
+            //parseFloat() mengubah string input menjadi angka desimal.
+            let totalPengeluaran = hitungpengeluaran(pengeluaranBulanan, pengeluaranTahunan);
+            let perbandingan = perbandinganpengeluaran(pengeluaranBulanan, pengeluaranTahunan);
+            let rataRata = rata(pengeluaranTahunan);
+
+            document.getElementById("total").innerText = "Total Pengeluaran: Rp " + totalPengeluaran;
+            document.getElementById("perbandingan").innerText = perbandingan;
+            document.getElementById("rata").innerText = "Rata-rata Pengeluaran Bulanan dari Pengeluaran Tahunan: Rp " + rataRata;
+        }
+
+    </script>
+</body>
+</html>
